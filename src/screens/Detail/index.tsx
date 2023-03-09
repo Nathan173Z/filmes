@@ -9,10 +9,6 @@ import {
     Header,
     HeaderButton,
     Banner,
-    BannerLink,
-    ContentArea,
-    Rate,
-    ListGenres,
     Description
 } from './styles';
 import { api, key } from '../../services/api';

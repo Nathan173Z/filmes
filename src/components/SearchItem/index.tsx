@@ -1,8 +1,13 @@
 import React from "react";
 import { useNavigation } from '@react-navigation/native'
-import { Ionicons } from '@expo/vector-icons'
 import { Alert } from 'react-native'
-import { Banner, Container, Title, RateContainer, Rate } from "./styles";
+
+
+import { 
+    Banner, 
+    Container, 
+    Title, 
+} from "./styles";
 
 type MoviesProps = {
     id: number
@@ -28,6 +33,7 @@ export default function SearchItem({ data }: { data: MoviesProps }) {
 
     return (
         <Container activeOpacity={0.7} onPress={() => navigateDetailPage(data)}>
+            <Title>{data?.title}</Title>
             {data?.poster_path ? (
                 <Banner
                     resizeMethod="resize"
@@ -35,11 +41,7 @@ export default function SearchItem({ data }: { data: MoviesProps }) {
             ) : (
                 <Banner />
             )}
-            <Title>{data?.title}</Title>
-            <RateContainer>
-                <Ionicons name="md-star" size={12} color="#E7A748" />
-                <Rate>{data?.vote_average}/10</Rate>
-            </RateContainer>
+            
         </Container>
     )
 

@@ -1,9 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { RouteProp, useNavigation, useRoute } from '@react-navigation/native'
-import { Container, ListMovies, Loading } from './styles'
 import { api, key } from '../../services/api'
 import SearchItem from '../../components/SearchItem';
 import { ActivityIndicator } from 'react-native';
+
+import { 
+    Container, 
+    ListMovies, 
+    Loading 
+} from './styles'
+
 
 type RouteProps = {
     name: string

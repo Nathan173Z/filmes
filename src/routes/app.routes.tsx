@@ -10,9 +10,28 @@ export function AppRoutes() {
   return (
     <Navigator screenOptions={{ headerShown: false }}>
       <Group>
-      <Screen name='Home' component={Home} />
-      <Screen name='Search' component={Search}/>
-      <Screen name='Detail' component={Detail}/>
+      <Screen name='Home' component={Home} 
+        />
+
+    <Group screenOptions={{ headerShown: true }}>
+      <Screen name='Search' component={Search}
+           options={{
+            title: 'Sua Busca',
+            
+            headerTintColor: '#FFFFFF',
+            headerTitleStyle: {
+              color: '#FFFFFF',
+          },
+          headerStyle: {
+            backgroundColor: '#434343'
+        }
+          }}
+      />
+       </Group>
+
+
+      <Screen name='Detail' component={Detail} 
+      />
       </Group>
     </Navigator>
   )

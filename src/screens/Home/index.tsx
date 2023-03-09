@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react'
-import { ScrollView, ActivityIndicator, Alert } from 'react-native';
 import { Feather } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
+import Header from '../../components/Header';
+import { ScrollView, } from 'react-native';
 
 import {
     Container,
@@ -9,13 +10,9 @@ import {
     Input,
     SearchButton,
     Title,
-    Banner,
-    BannerButton,
     SliderMovie,
-    Loading
 } from './styles';
 
-import Header from '../../components/Header';
 
 type MoviesProps = {
     id: number
@@ -28,20 +25,14 @@ type MoviesProps = {
 
 
 export function Home() {
-
     const [input, setInput] = useState('');
-
     const navigation = useNavigation();
 
-    
     function handleSearchMovie() {
         if (input === '') return;
-
         navigation.navigate('Search', { name: input })
         setInput('')
     }
-
-    
 
 
     return (
@@ -49,8 +40,8 @@ export function Home() {
             <Header title="BUSCAR FILMES" />
             <SearchContainer>
                 <Input
-                    placeholder="Ex Vingadores"
-                    placeholderTextColor="#DDD"
+                    placeholder="Qual Filme Você Procura?"
+                    placeholderTextColor="#ffffff"
                     value={input}
                     onChangeText={(text: string) => setInput(text)}
                 />
@@ -59,6 +50,20 @@ export function Home() {
                 </SearchButton>
             </SearchContainer>       
 
+            <ScrollView>
+                <Title>
+                    Em Cartaz
+                </Title>
+                <SliderMovie source={{uri:'https://www.ioccaruaru.com.br/img/em_breve.jpg'}}/>
+
+                <Title>Populares</Title>
+                <SliderMovie source={{uri:'https://www.ioccaruaru.com.br/img/em_breve.jpg'}}/>
+
+                <Title>Mais Votados</Title>
+                <SliderMovie source={{uri:'https://www.ioccaruaru.com.br/img/em_breve.jpg'}}/>
+                   
+                 
+            </ScrollView>
         </Container>
     )
 }

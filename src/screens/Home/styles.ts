@@ -2,7 +2,7 @@ import { FlatList } from "react-native";
 import styled from "styled-components/native";
 
 export const Container = styled.SafeAreaView`
-  background-color: #141a29;
+  background-color: #383b42;
   flex: 1;
   padding: 4px 0;
 `;
@@ -17,7 +17,7 @@ export const SearchContainer = styled.View`
 `;
 
 export const Input = styled.TextInput`
-  background-color: rgba(255, 255, 255, 0.4);
+  background-color: #084d6e;
   color: #ffffff;
   width: 85%;
   height: 50px;
@@ -43,22 +43,10 @@ export const Title = styled.Text`
   color: #ffffff;
 `;
 
-export const BannerButton = styled.TouchableOpacity``;
 
-export const Banner = styled.Image`
-  height: 150px;
-  border-radius: 15px;
-  margin: 0 15px;
-`;
 
-export const SliderMovie = styled.FlatList`
+export const SliderMovie = styled.Image`
   height: 250px;
   padding: 0 14px;
 `;
 
-export const Loading = styled.View`
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-`;
