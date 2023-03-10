@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "651418723545",
-    "project_id": "comfilmes-ed4cb",
-    "storage_bucket": "comfilmes-ed4cb.appspot.com"
+    "project_number": "898375446206",
+    "project_id": "appfilmes-3efff",
+    "storage_bucket": "appfilmes-3efff.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:651418723545:android:7b4e7a13a575a5081d0ac8",
+        "mobilesdk_app_id": "1:898375446206:android:a7159160c2f68f7f97f8ef",
         "android_client_info": {
           "package_name": "com.filmes"
         }
       },
       "oauth_client": [
         {
-          "client_id": "651418723545-04gda4287srdioeilqfo8bprs59snl8m.apps.googleusercontent.com",
+          "client_id": "898375446206-tev1tp9j2fk20s3c0sl1g32kasb6907h.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBf_8ie-HVAljM-RrVgaWVp-VeR0Bxfw_0"
+          "current_key": "AIzaSyBQH6_gXGiudf3gwOfnMFZq4GbQDU9cJsU"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "651418723545-04gda4287srdioeilqfo8bprs59snl8m.apps.googleusercontent.com",
+              "client_id": "898375446206-tev1tp9j2fk20s3c0sl1g32kasb6907h.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

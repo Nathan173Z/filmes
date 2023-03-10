@@ -3,6 +3,7 @@ import { Feather } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
 import Header from '../../components/Header';
 import { ScrollView, } from 'react-native';
+import firestore from '@react-native-firebase/firestore'
 
 import {
     Container,
@@ -28,6 +29,17 @@ export function Home() {
     const [input, setInput] = useState('');
     const navigation = useNavigation();
 
+    const [ todo, setTodo ] = useState('FOI SOU FODA');
+    const ref = firestore().collection('favoritos');
+
+    async function addTodo() {
+        await ref.add({
+          title: todo,
+          complete: false,
+        });
+        setTodo('');
+      }
+
     function handleSearchMovie() {
         if (input === '') return;
         navigation.navigate('Search', { name: input })
@@ -45,7 +57,7 @@ export function Home() {
                     value={input}
                     onChangeText={(text: string) => setInput(text)}
                 />
-                <SearchButton onPress={handleSearchMovie} >
+                <SearchButton onPress={handleSearchMovie}>
                     <Feather name="search" size={38} color="#FFFFFF" />
                 </SearchButton>
             </SearchContainer>       
