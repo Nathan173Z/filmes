@@ -18,7 +18,6 @@ type MoviesProps = {
     id: number
     title: string
     overview: string
-    vote_average: number
     poster_path: string
     genres: [{ id: number, name: string }],
 }
@@ -36,7 +35,6 @@ export  function Detail() {
         overview: '',
         title: '',
         poster_path: '',
-        vote_average: 0,
         genres: [{ id: 0, name: '' }],
     });
 
@@ -65,13 +63,9 @@ export  function Detail() {
      function handleFavoriteMovie(movie: MoviesProps) {
 
         if(favoriteMovie){ 
-            firestore()
-            .collection('Favoritos')
-            .doc()
-            .delete()
         }
         firestore()
-        .collection('Favoritos')
+        .collection('favoritos')
         .add({
             movie,
             createdAt: firestore.FieldValue.serverTimestamp()
@@ -79,6 +73,8 @@ export  function Detail() {
         .then(() => {
             Alert.alert("Produto adicionado com sucesso!")
           })
+
+          setFavoriteMovie(false)
           
         console.log('você clicou')
     }
