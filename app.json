@@ -3,8 +3,25 @@
     "name": "filmes",
     "slug": "filmes",
     "version": "1.0.0",
+    "icon": "./assets/appfilmes.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/buscar.png",
+      "backgroundColor": "#004AAD"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/buscar.png",
+        "backgroundColor": "#000000 "
+      }
+    },
     "assetBundlePatterns": [
       "**/*"
-    ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "26166ffe-467a-46f6-83ef-35488bd0e039"
+      }
+    }
   }
 }

@@ -4,12 +4,13 @@ import { NavigationContainer } from '@react-navigation/native';
 import { Home } from './src/screens/Home';
 import { Search } from './src/screens/Search';
 import { AppRoutes  } from './src/routes/app.routes'
-import { Detail } from './src/screens/Detail'
+
+import { Routes } from './src/routes'
 
 export default function App() {
   return (
     <NavigationContainer>
-      <AppRoutes/> 
+      <Routes/> 
       <StatusBar hidden={true} />
     </NavigationContainer>
   );
